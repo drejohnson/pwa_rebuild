@@ -1,0 +1,26 @@
+/*
+  JSPM doesn't have a Stylus plugin yet and it's LESS plugin
+  doesn't support @imports yet, so we're going to use straight css.
+  Here's our color palate:
+
+  primaryColor = #0277BD
+  accentColor = #1DE9B6
+  bgColor = #efefef
+  darkBgColor = #263238
+  lightBgColor = #37474F
+  lightTextColor = #F5F5F5
+  darkTextColor = #212121
+*/
+
+.md-sidenav-left {
+  width: 150px;
+  min-width: 150px;
+  max-width: 150px;
+  background-color: #1d1d1d;
+}
+
+.md-sidenav-left.md-locked-open {
+  width: 150px;
+  min-width: 150px;
+  max-width: 150px;
+}

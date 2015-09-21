@@ -1,0 +1,79 @@
+{
+  "name": "FEDS",
+  "version": "0.0.1",
+  "description": "starter",
+  "dependencies": {},
+  "scripts": {
+    "info": "echo 'npm as a build tool'",
+    "lint": "eslint -c .eslintrc src",
+    "test": "karma start",
+    "postinstall": "jspm install"
+  },
+  "keywords": [
+    "angular",
+    "jspm",
+    "es6"
+  ],
+  "author": "DeAndre Johnson",
+  "license": "MIT",
+  "jspm": {
+    "configFile": "jspm.config.js",
+    "dependencies": {
+      "angular": "github:angular/bower-angular@^1.5.0-beta.0",
+      "angular-animate": "github:angular/bower-angular-animate@^1.5.0-beta.0",
+      "angular-mocks": "npm:angular-mocks@^1.5.0-beta.0",
+      "angular-sanitize": "github:angular/bower-angular-sanitize@^1.5.0-beta.0",
+      "angular-ui-router": "github:angular-ui/ui-router@^0.2.15",
+      "clean-css": "npm:clean-css@^3.4.4",
+      "css": "github:systemjs/plugin-css@^0.1.16",
+      "normalize.css": "github:necolas/normalize.css@^3.0.3",
+      "rx-angular": "npm:rx-angular@^0.0.14",
+      "text": "github:systemjs/plugin-text@^0.0.2"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@5.8.24",
+      "babel-runtime": "npm:babel-runtime@5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    },
+    "buildConfig": {
+      "minify": true
+    }
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "browser-sync": "^2.9.3",
+    "connect-modrewrite": "^0.8.2",
+    "del": "^2.0.1",
+    "eslint": "^1.4.1",
+    "eslint-config-airbnb": "0.0.8",
+    "eslint-config-angular": "^0.4.0",
+    "eslint-plugin-angular": "^0.12.0",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-html-replace": "^1.5.0",
+    "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-newer": "^0.5.1",
+    "gulp-ng-annotate": "^1.1.0",
+    "gulp-postcss": "^6.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-template": "^3.0.0",
+    "gulp-uglify": "^1.4.1",
+    "jspm": "^0.16.2",
+    "karma": "^0.13.9",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-jspm": "^2.0.1",
+    "karma-mocha": "^0.2.0",
+    "karma-mocha-reporter": "^1.1.1",
+    "lodash": "^3.10.1",
+    "lost": "^6.6.2",
+    "postcss": "^5.0.5",
+    "postcss-import": "^7.0.0",
+    "precss": "^1.1.3",
+    "protractor": "^2.2.0",
+    "run-sequence": "^1.1.2",
+    "systemjs-builder": "^0.13.6",
+    "yargs": "^3.24.0"
+  }
+}
