@@ -1,4 +1,26 @@
-<main ng-if="vm.activated">
-	<h1>you can find me in {{ vm.name }}.html</h1>
-</main>
+<!-- <main ng-if="vm.activated">
+	<h1 id="title">you can find me in {{ vm.name }}.html</h1>
+</main> -->
+<section class="intro home" ng-if="vm.activated">
+  <div class="intro-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <h1 class="brand-heading animated bounceInDown">Welcome to the <br> Project WE<span>b</span> ACT<span>s</span> study site!</h1>
+          <p class="intro-text animated fadeIn">Welcome to the Project WEb ACTs study site! Please leave all windows open as you move through the site. Follow the steps below in order to complete the study and receive your $10 Amazon egift card for participating.</p>
+          <ol class="intro-text animated fadeIn" style="font-size:18px;text-align:left;">
+            <li>Complete the pre-study questionnaire by clicking below.</li>
+            <li>At the end of the questionnaire, you will see a link to a website designed to educate about organ donation. Please click that link and explore the site.</li>
+            <li>Return to this page and the "pre-study questionnaire" box will say "post-study questionnaire". (Note that the "post-study questionnaire" box will only appear only after you have had this page open for at least ten minutes.)</li>
+            <li>Click the "post-study questionnaire" box and complete that questionnaire.</li>
+            <li>After completing the questionnaire, you will see instructions for receiving your incentive. Please follow the instructions to receive your $10 Amazon egift card via email within one business day.</li>
+          </ol>
+          <a ui-sref="pre-study" href="/pre-study" target="_blank" ng-click="home.timer()" id="preTest" class="btn btn-default btn-lg">Pre-study Questionnaire</a>
+          <a ui-sref="post-study" href="/post-study" target="_blank" id="postTest" class="btn btn-default btn-lg">Post-study Questionnaire</a>
+          <!-- {{home.counter}} -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <div ng-if="!vm.activated">Loading Data...</div>

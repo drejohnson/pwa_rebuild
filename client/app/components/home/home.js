@@ -18,15 +18,23 @@ import {RouteConfig, Component, View, Inject} from '../../core/decorators/decora
 @View({
   template: template
 })
-@Inject('TestService', '$log')
+@Inject('$scope', '$rootScope', '$http', '$state', '$interval', '$location', '$log')
 // end-non-standard
 
 // Home Controller
 class Home {
-  constructor(TestService, $log) {
+  constructor($scope, $rootScope, $http, $state, $interval, $location, $log) {
+    this.$scope = $scope;
+    this.$http = $http;
+    this.$state = $state;
+    this.$interval = $interval;
+    this.$location = $location;
     this.$log = $log;
-    this.TestService = TestService;
     this.name = 'home';
+    this.intro = [{
+      'heading': 'The Facts'
+    }];
+    this.isHome = this.$state.current.url === '/';
     this.activated = false;
 
     // On load
@@ -37,8 +45,22 @@ class Home {
    * Handles on load processing, and loading initial data
  */
   activate() {
-    const test = this.TestService.getService();
-    this.$log.log(test);
+    this.$log.log(this.$state.current.url === '/');
+
+    const stateChangeSuccess = this.$scope.$on('$stateChangeSuccess', (event, toState) => {
+      this.isHome;
+    });
+
+    const unbind = [
+      stateChangeSuccess
+    ];
+
+    this.$scope.$on('$destroy', () => {
+      unbind.forEach((fn) => {
+        fn();
+      });
+    });
+
     this.activated = true;
   }
 }

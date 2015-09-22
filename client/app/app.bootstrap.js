@@ -1,4 +1,5 @@
 //  ----------------Core Deps---------------  //
+import $ from 'jquery';
 import angular from 'angular';
 import 'angular-animate';
 import 'angular-sanitize';

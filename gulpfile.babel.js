@@ -81,38 +81,38 @@ gulp.task('lint', () => {
   });
 });
 
-gulp.task('build', gulp.series('clean',  function building() {
-  const dist = path.join(paths.dist + 'app.js');
+gulp.task('build', () => {
+  const dist = path.join(paths.dist + 'build.js');
 
   const Builder = systemjsBuilder;
 	const builder = new Builder({
-    baseURL: 'client',
+    baseURL: './',
   });
 	builder.reset();
   builder.loadConfig("./jspm.config.js")
     .then(() => {
-      return jspm.bundleSFX(resolveToApp('app.bootstrap'), dist, {minify: true, mangle: false, sourceMaps: true})
+      return builder.buildStatic(resolveToApp('app.bootstrap'), dist, {minify: true, mangle: false, sourceMaps: true})
       .then(()=> {
         // Also create a fully annotated minified copy
         return gulp.src(dist)
         // .pipe($.ngAnnotate())
         // .pipe($.uglify())
-        .pipe($.rename('app.min.js'))
+        // .pipe($.rename('app.min.js'))
         .pipe(gulp.dest(paths.dist))
       })
       .then(()=> {
         // Inject minified script into index
         return gulp.src('client/index.html')
         .pipe($.htmlReplace({
-          'js': 'app.min.js'
+          'js': 'build.js'
         }))
         .pipe(gulp.dest(paths.dist));
       });
     })
-}));
+});
 
 // Browser-sync
-gulp.task('serve', () => {
+gulp.task('serve', gulp.series('styles', () => {
   serve({
     port: process.env.PORT || 3000,
     open: false,
@@ -122,7 +122,7 @@ gulp.task('serve', () => {
       paths.html
     ),
     server: {
-      baseDir: root,
+      baseDir: [root, root + '/static'],
       // serve our jspm dependencies with the client folder
       routes: {
         '/jspm.config.js': './jspm.config.js',
@@ -139,8 +139,8 @@ gulp.task('serve', () => {
   gulp.watch(
     [paths.html, paths.css, paths.js]
   )
-  .on('change', gulp.parallel('styles', 'lint', reload));
-});
+  .on('change', gulp.parallel('lint', reload));
+}));
 
 gulp.task('dist',
   gulp.series(
@@ -151,7 +151,7 @@ gulp.task('dist',
 
 // Browser-sync Dist
 gulp.task('serve:dist',
-  gulp.parallel('lint', 'build', 'static', function serving() {
+  gulp.parallel('clean', 'styles', 'lint', 'build', 'static', function serving() {
     serve({
       port: process.env.PORT || 3000,
       open: false,

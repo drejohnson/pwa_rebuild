@@ -36,7 +36,7 @@ class OnRun {
 
     const stateChangeStart = $rootScope.$on('$stateChangeStart', (event, toState, toParams, fromState, fromParams) => {
       $log.log('Change Started:', new Date());
-      $log.log(fromState);
+      // $log.log(toState);
     });
 
     const stateChangeError = $rootScope.$on('$stateChangeError', (event, next, previous, error) => {
