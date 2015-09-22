@@ -3,6 +3,7 @@ import angular from 'angular';
 import 'angular-animate';
 import 'angular-sanitize';
 import 'angular-ui-router';
+import 'angular-strap';
 
 //  ----------------App Files---------------  //
 import './core/core';

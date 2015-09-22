@@ -3,7 +3,6 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 import path from 'path';
 import jspm from 'jspm';
 import systemjsBuilder from 'systemjs-builder';
-import atCSS from 'postcss-import';
 import sync from 'run-sequence';
 import serve from 'browser-sync';
 import modRewrite from 'connect-modrewrite';
@@ -29,7 +28,7 @@ const resolveToComponents = (glob) => {
 // map of all paths
 const paths = {
   js: resolveToComponents('**/*!(.spec.js).js'), // exclude spec files
-  css: resolveToApp('**/*.css'), // stylesheets
+  css: resolveToApp('**/*.scss'), // stylesheets
   html: [
     resolveToApp('**/*.html'),
     path.join(root, 'index.html')
@@ -44,24 +43,22 @@ gulp.task('clean', done => del([paths.dist], {dot: true}, done));
 
 // Style tasks
 let styleTask = (stylesPath, srcs) => {
-  const processors = [
-		atCSS({
-			from: 'client/app/styles/*.css'
-		})
-  ];
   return gulp.src(srcs.map((src) => {
       return path.join(root + '/app', stylesPath, src);
     }))
     .pipe($.newer(stylesPath, {extension: '.css'}))
 		.pipe($.sourcemaps.init())
-    .pipe($.postcss(processors).on('error', console.error.bind(console)))
+    // .pipe($.postcss(processors).on('error', console.error.bind(console)))
+    .pipe($.sass({
+      precision: 10
+    }).on('error', $.sass.logError))
 		.pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest(root + '/app/layout'));
 };
 
 // Compile and Automatically Prefix Stylesheets
 gulp.task('styles', () => {
-  return styleTask('styles', ['app.css']);
+  return styleTask('styles', ['app.scss']);
 });
 
 gulp.task('static', () => {
@@ -142,7 +139,7 @@ gulp.task('serve', () => {
   gulp.watch(
     [paths.html, paths.css, paths.js]
   )
-  .on('change', gulp.parallel('lint', reload));
+  .on('change', gulp.parallel('styles', 'lint', reload));
 });
 
 gulp.task('dist',

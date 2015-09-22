@@ -18,9 +18,11 @@ System.config({
     "angular-animate": "github:angular/bower-angular-animate@1.5.0-beta.0",
     "angular-mocks": "npm:angular-mocks@1.5.0-beta.0",
     "angular-sanitize": "github:angular/bower-angular-sanitize@1.5.0-beta.0",
+    "angular-strap": "github:mgcrea/angular-strap@2.3.2",
     "angular-ui-router": "github:angular-ui/ui-router@0.2.15",
     "babel": "npm:babel-core@5.8.24",
     "babel-runtime": "npm:babel-runtime@5.8.24",
+    "bootstrap-sass": "github:twbs/bootstrap-sass@3.3.5",
     "clean-css": "npm:clean-css@3.4.4",
     "core-js": "npm:core-js@1.1.4",
     "css": "github:systemjs/plugin-css@0.1.16",
@@ -70,6 +72,9 @@ System.config({
     },
     "github:jspm/nodelibs-util@0.1.0": {
       "util": "npm:util@0.10.3"
+    },
+    "github:mgcrea/angular-strap@2.3.2": {
+      "angular": "github:angular/bower-angular@1.5.0-beta.0"
     },
     "github:necolas/normalize.css@3.0.3": {
       "css": "github:systemjs/plugin-css@0.1.16"

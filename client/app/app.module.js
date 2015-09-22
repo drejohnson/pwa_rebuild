@@ -3,7 +3,8 @@ import angular from 'angular';
 
 const appModule = angular.module('app', [
   'ngSanitize',
-  'ui.router'
+  'ui.router',
+  'mgcrea.ngStrap'
 ]);
 
 export default appModule;
