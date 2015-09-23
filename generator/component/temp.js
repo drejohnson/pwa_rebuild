@@ -2,8 +2,8 @@ import template from './<%= name %>.html!text';
 import {RouteConfig, Component, View, Inject} from '../../core/decorators/decorators';
 
 // start-non-standard
-@RouteConfig('app.<%= name %>', {
-  url: '/',
+@RouteConfig('<%= name %>', {
+  url: '/<%= name %>',
   template: '<<%= name %>></<%= name %>>',
   resolve: {
     // Constant Meta
@@ -20,8 +20,8 @@ import {RouteConfig, Component, View, Inject} from '../../core/decorators/decora
 @Inject('$log')
 // end-non-standard
 
-// <%= upCaseName %> Controller
-class <%= upCaseName %> {
+// <%= camelCaseName %> Controller
+class <%= camelCaseName %> {
   constructor() {
     this.name = '<%= name %>';
     this.activated = false;
@@ -38,4 +38,4 @@ class <%= upCaseName %> {
   }
 }
 
-export default <%= upCaseName %>;
+export default <%= camelCaseName %>;

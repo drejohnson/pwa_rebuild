@@ -45,24 +45,20 @@
 
 .intro.home {
   margin-top: 0;
-  height: 100%;
-  @media(min-width: $screen-sm-min - 1) {
-    height: 100vh;
-  }
   background: url(/images/banner_home_intro.jpg) no-repeat bottom center scroll;
   background-color: #000;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
   background-size: cover;
 
   .intro-body {
-    // position: absolute;
-    background-color: rgba(0,0,0,.3);
-    top: 40px;
+    background-color: rgba(0,0,0,.7);
+    height: 100vh;
     padding: 20px 0;
+
     @media(min-width: $screen-sm-min - 1) {
       position: relative;
-      padding: 20px;
+      background-color: rgba(0,0,0,.3);
+      height: 100%;
+      padding: 20px 0;
     }
 
     .brand-heading span {

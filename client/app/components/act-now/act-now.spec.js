@@ -2,18 +2,18 @@
 // https://github.com/Workiva/karma-jspm/issues/23
 import angular from 'angular';
 import 'angular-mocks';
-import TestModule from './test'
-import TestTemplate from './test.html!text';
+import Act-nowModule from './act-now'
+import Act-nowTemplate from './act-now.html!text';
 
-describe('Test', ()=>{
+describe('Act-now', ()=>{
 	let $rootScope,
 	makeController;
 
-	beforeEach(angular.mock.module(TestModule.name));
+	beforeEach(angular.mock.module(Act-nowModule.name));
 	beforeEach(angular.mock.inject((_$rootScope_)=>{
 		$rootScope = _$rootScope_;
 		makeController = ()=>{
-			return new TestController();
+			return new Act-nowController();
 		};
 	}));
 
@@ -39,17 +39,17 @@ describe('Test', ()=>{
 		// use Regexes to test that you are using the right bindings {{  }}
 
 		it('should have name in template [REMOVE]', ()=>{
-			expect(TestTemplate).to.match(/{{\s?vm\.name\s?}}/g);
+			expect(Act-nowTemplate).to.match(/{{\s?vm\.name\s?}}/g);
 		});
 	});
 
 
 	describe('Component', ()=>{
 			// test the component/directive itself
-			let component = TestComponent();
+			let component = Act-nowComponent();
 
 			it('should use the right template',()=>{
-				expect(component.template).to.equal(TestTemplate);
+				expect(component.template).to.equal(Act-nowTemplate);
 			});
 
 			it('should use controllerAs', ()=>{
@@ -57,7 +57,7 @@ describe('Test', ()=>{
 			});
 
 			it('should use the right controller', ()=>{
-				expect(component.controller).to.equal(TestController);
+				expect(component.controller).to.equal(Act-nowController);
 			});
 	});
 });

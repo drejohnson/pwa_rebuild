@@ -18,23 +18,17 @@ import {RouteConfig, Component, View, Inject} from '../../core/decorators/decora
 @View({
   template: template
 })
-@Inject('$scope', '$rootScope', '$http', '$state', '$interval', '$location', '$log')
+@Inject('$state', '$interval', '$log')
 // end-non-standard
 
 // Home Controller
 class Home {
-  constructor($scope, $rootScope, $http, $state, $interval, $location, $log) {
-    this.$scope = $scope;
-    this.$http = $http;
+  constructor($state, $interval, $log) {
     this.$state = $state;
     this.$interval = $interval;
-    this.$location = $location;
     this.$log = $log;
-    this.name = 'home';
-    this.intro = [{
-      'heading': 'The Facts'
-    }];
-    this.isHome = this.$state.current.url === '/';
+    this.showPostBtn = false;
+    this.showCounter = false;
     this.activated = false;
 
     // On load
@@ -45,21 +39,16 @@ class Home {
    * Handles on load processing, and loading initial data
  */
   activate() {
-    this.$log.log(this.$state.current.url === '/');
 
-    const stateChangeSuccess = this.$scope.$on('$stateChangeSuccess', (event, toState) => {
-      this.isHome;
-    });
-
-    const unbind = [
-      stateChangeSuccess
-    ];
-
-    this.$scope.$on('$destroy', () => {
-      unbind.forEach((fn) => {
-        fn();
-      });
-    });
+    this.timer = () => {
+      this.counter = 0;
+      this.count = this.$interval(() => {
+        this.counter++;
+        if (this.counter > 600) {
+          this.showPostBtn = true;
+        }
+      }, 1000);
+    };
 
     this.activated = true;
   }

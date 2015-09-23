@@ -136,10 +136,10 @@ gulp.task('serve', gulp.series('styles', () => {
     ]
   });
 
-  gulp.watch(
-    [paths.html, paths.css, paths.js]
-  )
-  .on('change', gulp.parallel('lint', reload));
+  gulp.watch( paths.html).on('change', reload);
+  gulp.watch( paths.css).on('change', gulp.series('styles', reload));
+  gulp.watch( paths.js).on('change', gulp.series('lint', reload));
+
 }));
 
 gulp.task('dist',
@@ -176,14 +176,20 @@ gulp.task('component', () => {
   const cap = (val) => {
     return val.charAt(0).toUpperCase() + val.slice(1);
   };
+  const camel = (val) => {
+    return val.replace( /-([a-z])/ig, ( all, letter ) => letter.toUpperCase());
+  }
   const name = yargs.argv.name;
+  const upCaseName = cap(name);
+  const camelCaseName = camel(upCaseName)
   const parentPath = yargs.argv.parent || '';
   const destPath = path.join(resolveToComponents(), parentPath, name);
 
   return gulp.src(paths.blankTemplates)
   .pipe($.template({
-    name: name,
-    upCaseName: cap(name)
+    name,
+    upCaseName,
+    camelCaseName
   }))
   .pipe($.rename((path) => {
     path.basename = path.basename.replace('temp', name);

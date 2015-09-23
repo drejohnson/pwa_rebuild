@@ -15,9 +15,9 @@
             <li>Click the "post-study questionnaire" box and complete that questionnaire.</li>
             <li>After completing the questionnaire, you will see instructions for receiving your incentive. Please follow the instructions to receive your $10 Amazon egift card via email within one business day.</li>
           </ol>
-          <a ui-sref="pre-study" href="/pre-study" target="_blank" ng-click="home.timer()" id="preTest" class="btn btn-default btn-lg">Pre-study Questionnaire</a>
-          <a ui-sref="post-study" href="/post-study" target="_blank" id="postTest" class="btn btn-default btn-lg">Post-study Questionnaire</a>
-          <!-- {{home.counter}} -->
+          <a ui-sref="pre-study" href="/pre-study" target="_blank" ng-click="vm.timer()" ng-if="!vm.showPostBtn" id="preTest" class="btn btn-default btn-lg">Pre-study Questionnaire</a>
+          <a ui-sref="post-study" href="/post-study" target="_blank" id="postTest" ng-if="vm.showPostBtn" class="btn btn-default btn-lg">Post-study Questionnaire</a>
+          <div ng-if="vm.showCounter">{{vm.counter}}</div>
         </div>
       </div>
     </div>

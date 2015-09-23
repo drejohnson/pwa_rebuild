@@ -2,9 +2,9 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900,900italic|Montserrat:400,700|Playfair+Display:400italic,700italic,900italic|Roboto+Condensed:400,700");
 
 $icon-font-path: "../../../jspm_packages/github/twbs/bootstrap-sass@3.3.5/assets/fonts/bootstrap/";
+@import 'variables';
 @import '../../../jspm_packages/github/twbs/bootstrap-sass@3.3.5/assets/stylesheets/_bootstrap.scss';
 
-@import 'variables';
 @import 'navbar';
 @import 'intro';
 @import 'sections';
@@ -42,7 +42,7 @@ body {
   font-weight: 300;
   color: #fff;
   background-color: #232d40;
-  // margin: 90px;
+  margin-bottom: 90px;
 }
 
 body.home {
@@ -99,6 +99,10 @@ img {
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
+}
+
+app {
+  display: block;
 }
 
 // @Footer

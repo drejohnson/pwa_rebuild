@@ -5,6 +5,14 @@ import 'angular-animate';
 import 'angular-sanitize';
 import 'angular-ui-router';
 import 'angular-strap';
+import 'angulartics/angulartics';
+import 'angulartics/angulartics-google-analytics';
+import 'videogular';
+import 'videogular-buffering';
+import 'videogular-controls';
+import 'videogular-overlay-play';
+import 'videogular-poster';
+import 'videogular-analytics';
 
 //  ----------------App Files---------------  //
 import './core/core';

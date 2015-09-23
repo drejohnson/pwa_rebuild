@@ -6,6 +6,7 @@ class OnRun {
   @Run()
   @Inject('$rootScope', '$state', '$stateParams', '$location', '$log')
   static runFactory($rootScope, $state, $stateParams, $location, $log) {
+    $rootScope.showMainNav = $location.path() !== '/';
     $rootScope.$state = $state;
 
     const stateChangeSuccess = $rootScope.$on('$stateChangeSuccess', (event, toState) => {
@@ -17,6 +18,7 @@ class OnRun {
       //   $rootScope.pageTitle += ' \u2014 ';
       // }
 
+      $rootScope.pageClass = toState.name;
       $rootScope.pageTitle = AppSettings.appTitle;
       $rootScope.pageDescription = AppSettings.appDescription;
 

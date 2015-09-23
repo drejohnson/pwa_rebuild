@@ -22,8 +22,10 @@ import {RouteConfig, Component, View, Inject} from '../../core/decorators/decora
 
 // Footer Controller
 class Footer {
-  constructor() {
+  constructor($log) {
+    this.$log = $log;
     this.name = 'footer';
+    this.year = new Date().getFullYear();
     this.activated = false;
     // On load
     this.activate();

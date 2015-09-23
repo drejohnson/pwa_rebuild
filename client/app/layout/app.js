@@ -1,8 +1,17 @@
-import '../components/toolbar/toolbar';
+import '../components/navbar/navbar';
 import '../components/home/home';
-import '../components/about/about';
+import '../components/pre-study/pre-study';
+import '../components/post-study/post-study';
+import '../components/act-now/act-now';
+import '../components/fairness-in-organ-allocation/fairness-in-organ-allocation';
+import '../components/fairness-in-healthcare-delivery/fairness-in-healthcare-delivery';
+import '../components/lets-talk-about-life/lets-talk-about-life';
+import '../components/religious-beliefs/religious-beliefs';
 import '../components/footer/footer';
 import template from './app.html!text';
+import 'daneden/animate.css';
+import 'font-awesome';
+import 'videogular-themes-default/videogular.css!';
 import './app.css!';
 import {RouteConfig, View, Component, Inject} from '../core/decorators/decorators';
 
@@ -13,11 +22,13 @@ import {RouteConfig, View, Component, Inject} from '../core/decorators/decorator
 @View({
   template: template
 })
-@Inject('$log')
+@Inject('$state', '$log')
 // end-non-standard
+
+// App Controller
 class AppComponent {
-  constructor($log) {
-    $log.log('App Container');
+  constructor($state, $log) {
+    $log.log('App  Initialized');
   }
 }
 

@@ -1,0 +1,115 @@
+<!-- Intro Header -->
+<header class="intro page">
+  <div class="intro-banner">
+  </div>
+
+  <div class="intro-body">
+    <div class="intro-title animated fadeIn">
+      <h1>Act Now</h1>
+    </div>
+    <p class="intro-text animated fadeIn">Welcome to Project WEb ACTs. The site is intended to help you make an informed decision about becoming an organ donor. Below you will find our video library. Click each topic for more information: <span class="topics"><a ui-sref="act-now" href="/act-now">&bull; Act Now</a>, <a ui-sref="fairness-in-organ-allocation" href="/fairness-in-organ-allocation">&bull; Fairness in Organ Allocation</a>, <a ui-sref="fairness-in-healthcare-delivery" href="/fairness-in-healthcare-delivery">&bull; Fairness in Healthcare Delivery</a>, <a ui-sref="religious-beliefs" href="/religious-beliefs">&bull; Religious Beliefs</a> and <a ui-sref="lets-talk-about-life" href="/lets-talk-about-life"> &bull; Let’s Talk About Life</a>.</span></p>
+    </div>
+  </div>
+</header>
+
+<section id="video-playlist" class="content-section">
+  <div class="video-playlist-section">
+    <div class="videogular-container">
+      <videogular vg-theme="vm.config.theme.url">
+        <vg-media vg-src="vm.config.sources"
+                  vg-tracks="vm.config.tracks">
+        </vg-media>
+
+        <vg-controls>
+          <vg-play-pause-button></vg-play-pause-button>
+          <vg-time-display>{{ currentTime | date:'mm:ss' }}</vg-time-display>
+          <vg-scrub-bar>
+            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+          </vg-scrub-bar>
+          <vg-time-display>{{ timeLeft | date:'mm:ss' }}</vg-time-display>
+          <vg-time-display>{{ totalTime | date:'mm:ss' }}</vg-time-display>
+          <vg-volume>
+            <vg-mute-button></vg-mute-button>
+            <vg-volume-bar></vg-volume-bar>
+          </vg-volume>
+          <vg-fullscreen-button></vg-fullscreen-button>
+        </vg-controls>
+
+        <vg-analytics vg-track-info="vm.config.plugins.analytics"></vg-analytics>
+        <vg-overlay-play></vg-overlay-play>
+        <vg-poster vg-url='vm.config.plugins.poster'></vg-poster>
+      </videogular>
+    </div>
+    <div class="container" style="margin-top:26px;">
+      <div class="pull-right">
+        <a class="btn btn-default btn-lg" ui-sref="fairness-in-organ-allocation" href="/fairness-in-organ-allocation">Fairness In Organ Allocation <i class="fa fa-chevron-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- External Web links Section -->
+<section class="content-section" style="padding-top:0;">
+  <div class="bottom-section">
+    <div class="slant"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="divider"></div>
+          <div class="section-heading">
+            <h2><span>In the U.S., African Americans</span> are especially hard hit by the shortage of organs.</h2>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-8 col-sm-9">
+              <div class="intro_paragraph">
+                <p>There are a disproportionate number of American Americans on the transplant list due to a variety of reasons. One reason is that African Americans more often have chronic diseases like high blood pressure<a href="http://www.heart.org/HEARTORG/Conditions/HighBloodPressure/UnderstandYourRiskforHighBloodPressure/High-Blood-Pressure-and-African-Americans_UCM_301832_Article.jsp" target="_blank">*</a> and diabetes.<a href="http://www.diabetes.org/living-with-diabetes/treatment-and-care/high-risk-populations/treatment-african-americans.html " target="_blank">*</a></p>
+              </div>
+            </div>
+            <div class="col-xs-4 col-sm-3">
+              <div class="stat_gfx">
+                <img src="/images/act-now-40percent.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <p>Another reason so many African Americans are waiting for a transplant is the limited number of African American donors. The kidney transplant matching process is very dependent on HLA (human leukocyte antigen) matching. HLAs are proteins found in the blood that are inherited from one’s parents. The HLA markers in African Americans tend to be more mixed or varied than in whites; thus, the organs may be less compatible between donors and African American recipients.</p>
+          <p>Organs that do not match well are more likely to be rejected and those that do match are less likely to be rejected. With the need for transplant so great in African Americans, one way to address the problem is to increase the number of African American donors.
+          </p>
+
+          <div class="cta-floated">
+            <a href="https://www.donatelifega.org/emory1 " class="btn btn-default btn-lg" target="_blank">Register <br>Now</a>
+          </div>
+          <div class="divider"></div>
+          <div class="bottom_more">
+
+            <div class="more_block">
+              <div class="more_bg"></div>
+              <h2 class="intro_more">To learn more about...</h2>
+              <p>...kidney transplant, click on the following links:</p>
+              <ul>
+                <li><a class="link" href="http://unos.org/" target="_blank">United Networking for Organ Sharing (UNOS)</a></li>
+                <li><a href="https://www.kidney.org/transplantation/transaction" target="_blank">National Kidney Foundation</a></li>
+                <li><a class="link" href="http://organdonor.gov/aboutus.html" target="_blank">Organdonor.gov</a></li>
+                <li><a class="link" href="http://donatelife.net/" target="_blank">Donate Life</a></li>
+                <li><a class="link" href="http://lifelinkfound.org/" target="_blank">LifeLink</a></li>
+                <li><a href="http://www.kidneyfund.org/kidney-health/brochures/krt-fact-sheets/krt_treatmentoptions-transplant.pdf" target="_blank">American Kidney Fund – Brochure for Treatment Options</a></li>
+                <li><a href="http://www.transplantliving.org/" target="_blank">Transplant Living Website</a></li>
+                <li><a href="http://www.unos.org/donation/index.php?topic=kpd" target="_blank">Kidney Paired Donation</a></li>
+              </ul>
+            </div>
+
+            <div class="more_block">
+              <div class="more_bg"></div>
+              <h2 class="intro_more">To learn more about...</h2>
+              <p>...African Americans and time spent on waitlist, view the following video: </p>
+              <p><a ui-sref="fairness-in-organ-allocation" href="/fairness-in-organ-allocation" target="_blank">Fairness In Organ Allocation >></a></p>
+            </div>
+
+            <p class="highlighted">After exploring this website and becoming informed about the facts, think about registering on your state website to give the most precious gift of all – the gift of life.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

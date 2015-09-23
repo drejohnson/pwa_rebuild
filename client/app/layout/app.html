@@ -1,6 +1,3 @@
-<div layout="row" flex>
-  <div layout="column" layout-fill>
-    <md-content layout="column" flex layout-padding ui-view></md-content>
-  </div>
-</div>
-<footer></footer>
+<navbar ng-if="$root.$state.current.name !== 'home' && $root.$state.current.name !== 'pre-study'"></navbar>
+<main ui-view></main>
+<!-- <footer></footer> -->
