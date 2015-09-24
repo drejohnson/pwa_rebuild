@@ -17,7 +17,7 @@ import {RouteConfig, Component, View, Inject} from '../../core/decorators/decora
 @View({
   template: template
 })
-@Inject('$sce','$log')
+@Inject('$sce', '$log')
 // end-non-standard
 
 // ReligiousBeliefs Controller

@@ -84,6 +84,7 @@
     "lodash": "^3.10.1",
     "protractor": "^2.2.0",
     "run-sequence": "^1.1.2",
+    "sass-jspm-importer": "0.0.3",
     "systemjs-builder": "^0.14.3",
     "yargs": "^3.24.0"
   }

@@ -33,7 +33,7 @@ class OnRun {
       $rootScope.$url = url;
 
       $rootScope.registerLink = RegisterLink;
-      $log.log($rootScope.registerLink);
+      // $log.log($rootScope.registerLink);
 
       $log.log('Current Location: ' + $rootScope.$title);
 

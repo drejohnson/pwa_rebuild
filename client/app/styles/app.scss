@@ -1,13 +1,15 @@
 // Import Google Fonts
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900,900italic|Montserrat:400,700|Playfair+Display:400italic,700italic,900italic|Roboto+Condensed:400,700");
 
-$icon-font-path: "../../../jspm_packages/github/twbs/bootstrap-sass@3.3.5/assets/fonts/bootstrap/";
 @import 'variables';
+
+$icon-font-path: "../../../jspm_packages/github/twbs/bootstrap-sass@3.3.5/assets/fonts/bootstrap/";
 @import '../../../jspm_packages/github/twbs/bootstrap-sass@3.3.5/assets/stylesheets/_bootstrap.scss';
 
 @import 'navbar';
 @import 'intro';
 @import 'sections';
+@import 'videogular';
 @import 'videos';
 @import 'buttons';
 @import 'overlay';
