@@ -18,17 +18,13 @@ import {RouteConfig, Component, View, Inject} from '../../core/decorators/decora
 @View({
   template: template
 })
-@Inject('$state', '$interval', '$log')
+@Inject('$log')
 // end-non-standard
 
 // Home Controller
 class Home {
-  constructor($state, $interval, $log) {
-    this.$state = $state;
-    this.$interval = $interval;
+  constructor($log) {
     this.$log = $log;
-    this.showPostBtn = false;
-    this.showCounter = false;
     this.activated = false;
 
     // On load

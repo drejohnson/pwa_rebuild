@@ -5946,7 +5946,7 @@ body.home .navbar-custom {
   color: #fff;
   margin-top: 68px; }
   .intro .intro-body .brand-heading {
-    font-size: 28px;
+    font-size: 40px;
     text-transform: uppercase;
     letter-spacing: -3px; }
     @media (min-width: 767px) {
@@ -5974,15 +5974,15 @@ body.home .navbar-custom {
   background-color: #000;
   background-size: cover; }
   .intro.home .intro-body {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.2);
     height: 100vh;
-    padding: 20px 0; }
+    padding: 100px 0; }
     @media (min-width: 767px) {
       .intro.home .intro-body {
         position: relative;
         background-color: rgba(0, 0, 0, 0.3);
-        height: 100%;
-        padding: 20px 0; } }
+        height: 100vh;
+        padding: 100px 0; } }
     .intro.home .intro-body .brand-heading span {
       color: #c12b38;
       text-transform: lowercase; }
@@ -6062,15 +6062,14 @@ body.home .navbar-custom {
           color: #DDBD6A;
           text-decoration: underline; }
 
-@media (min-width: 767px) {
-  .intro.home {
-    height: 100vh; } }
-
 @media (min-width: 991px) {
   .intro.home {
     margin-top: 0; }
-    .intro.home .intro-body .brand-heading {
-      font-size: 46px; }
+    .intro.home .intro-body {
+      padding-top: 200px;
+      height: 100vh; }
+      .intro.home .intro-body .brand-heading {
+        font-size: 100px; }
     .intro.home .intro-body .intro-text {
       font-size: 25px; }
       .intro.home .intro-body .intro-text .topics {

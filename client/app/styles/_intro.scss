@@ -13,7 +13,7 @@
     .brand-heading {
       // font-family: 'Playfair Display', serif;
       // font-style: italic;
-      font-size: 28px;
+      font-size: 40px;
       @media(min-width: $screen-sm-min - 1) {
         font-size: 40px;
       }
@@ -50,15 +50,15 @@
   background-size: cover;
 
   .intro-body {
-    background-color: rgba(0,0,0,.7);
+    background-color: rgba(0,0,0,.2);
     height: 100vh;
-    padding: 20px 0;
+    padding: 100px 0;
 
     @media(min-width: $screen-sm-min - 1) {
       position: relative;
       background-color: rgba(0,0,0,.3);
-      height: 100%;
-      padding: 20px 0;
+      height: 100vh;
+      padding: 100px 0;
     }
 
     .brand-heading span {
@@ -165,21 +165,15 @@
   }
 }
 
-@media (min-width: $screen-sm-min - 1) {
-  .intro.home {
-    height: 100vh;
-  }
-}
-
 @media (min-width: $screen-md-min - 1) {
   .intro.home {
-    // height: 50vw;
     margin-top: 0;
 
     .intro-body {
-      // padding: 100px;
+      padding-top: 200px;
+      height: 100vh;
       .brand-heading {
-        font-size: 46px;
+        font-size: 100px;
       }
     }
 
