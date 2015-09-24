@@ -1,4 +1,4 @@
-import { AppSettings } from '../constants/constants';
+import { AppSettings, RegisterLink } from '../constants/constants';
 import { getTitleValue, getDescriptionValue, getMetaImgValue, getUrlValue } from '../utils/utils';
 import {Run, Inject} from '../decorators/decorators';
 
@@ -31,6 +31,9 @@ class OnRun {
       $rootScope.$description = description || $rootScope.pageDescription;
       $rootScope.$metaImg = metaImg;
       $rootScope.$url = url;
+
+      $rootScope.registerLink = RegisterLink;
+     // $log.log($rootScope.registerLink);
 
       $log.log('Current Location: ' + $rootScope.$title);
 
