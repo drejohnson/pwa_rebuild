@@ -1,4 +1,5 @@
 import template from './fairness-in-organ-allocation.html!text';
+import { VideoLinks } from '../../core/constants/constants';
 import {RouteConfig, Component, View, Inject} from '../../core/decorators/decorators';
 
 // start-non-standard
@@ -42,7 +43,7 @@ class FairnessInOrganAllocation {
     this.config = {
       preload: 'none',
       sources: [
-        {src: this.$sce.trustAsResourceUrl('https://www.googledrive.com/host/0B8YhAdfjIlGtTlBPbndnMjFWd1U'), type: 'video/mp4'},
+        {src: this.$sce.trustAsResourceUrl(VideoLinks.organAllocation), type: 'video/mp4'},
       ],
       plugins: {
         poster: '/images/video-covers/v2.jpg',

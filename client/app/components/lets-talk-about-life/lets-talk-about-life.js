@@ -1,4 +1,5 @@
 import template from './lets-talk-about-life.html!text';
+import { VideoLinks } from '../../core/constants/constants';
 import {RouteConfig, Component, View, Inject} from '../../core/decorators/decorators';
 
 // start-non-standard
@@ -39,7 +40,7 @@ class LetsTalkAboutLife {
     this.config = {
       preload: 'none',
       sources: [
-        {src: this.$sce.trustAsResourceUrl('https://www.googledrive.com/host/0B8YhAdfjIlGtMUdGWkhiRER2QkE'), type: 'video/mp4'},
+        {src: this.$sce.trustAsResourceUrl(VideoLinks.letsTalk), type: 'video/mp4'},
       ],
       plugins: {
         poster: '/images/video-covers/v5.jpg',

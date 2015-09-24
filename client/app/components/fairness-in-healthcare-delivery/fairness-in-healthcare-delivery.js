@@ -1,4 +1,5 @@
 import template from './fairness-in-healthcare-delivery.html!text';
+import { VideoLinks } from '../../core/constants/constants';
 import {RouteConfig, Component, View, Inject} from '../../core/decorators/decorators';
 
 // start-non-standard
@@ -39,7 +40,7 @@ class FairnessInHealthcareDelivery {
     this.config = {
       preload: 'none',
       sources: [
-        {src: this.$sce.trustAsResourceUrl('https://www.googledrive.com/host/0B8YhAdfjIlGtbzVnRWZyMmlsZm8'), type: 'video/mp4'},
+        {src: this.$sce.trustAsResourceUrl(VideoLinks.healthcareDelivery), type: 'video/mp4'},
       ],
       plugins: {
         poster: '/images/video-covers/v3.jpg',
