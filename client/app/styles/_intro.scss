@@ -13,18 +13,12 @@
     .brand-heading {
       // font-family: 'Playfair Display', serif;
       // font-style: italic;
-      font-size: 28px;
-      @media(min-width: $screen-sm-min - 1) {
-        font-size: 40px;
-      }
+      font-size: 40px;
       text-transform: uppercase;
-      letter-spacing: -3px;
+      letter-spacing: -5px;
     }
     .intro-text {
-      font-size: 16px;
-      @media(min-width: $screen-sm-min - 1) {
-        font-size: 18px;
-      }
+      font-size: 18px;
       font-weight: 400;
 
       &.animated {
@@ -33,37 +27,23 @@
         animation-duration: 3s;
       }
     }
-
-    .intro-text li {
-      font-size: 14px;
-      @media(min-width: $screen-sm-min - 1) {
-        font-size: 16px;
-      }
-    }
   }
 }
 
 .intro.home {
-  margin-top: 0;
+  margin-top: 68px;
+  height: 100%;
   background: url(/images/banner_home_intro.jpg) no-repeat bottom center scroll;
   background-color: #000;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
   background-size: cover;
 
   .intro-body {
-    background-color: rgba(0,0,0,.7);
-    height: 100vh;
-    padding: 20px 0;
-
+    position: absolute;
+    top: 80px;
     @media(min-width: $screen-sm-min - 1) {
       position: relative;
-      background-color: rgba(0,0,0,.3);
-      height: 100%;
-      padding: 20px 0;
-    }
-
-    .brand-heading span {
-      color: #c12b38;
-      text-transform: lowercase;
     }
   }
 }
@@ -83,7 +63,7 @@
   .intro-body {
     position: absolute;
     top: 10px;
-    width: 75%;
+    width: 65%;
     padding-top: 40px;
 
     @media(min-width: $screen-sm-min - 1) {
@@ -93,8 +73,8 @@
     }
 
     .intro-title {
-      width: 275px;
-      height: 80px;
+      width: 250px;
+      height: 70px;
       background-color: #c12b38;
       text-align: left;
       -webkit-transform-style: preserve-3d;
@@ -173,13 +153,12 @@
 
 @media (min-width: $screen-md-min - 1) {
   .intro.home {
-    // height: 50vw;
     margin-top: 0;
 
     .intro-body {
-      // padding: 100px;
+      padding-top: 200px;
       .brand-heading {
-        font-size: 46px;
+        font-size: 100px;
       }
     }
 

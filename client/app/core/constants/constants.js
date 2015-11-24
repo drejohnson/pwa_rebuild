@@ -3,7 +3,7 @@ export const AppSettings = Object.freeze({
   appDescription: 'This is what my app\'s description',
   appUrl: 'http://example.com'
 });
-export const RegisterLink = 'https://www.donatelifega.org/emory1';
+export const RegisterLink = 'https://www.donatelifegeorgia.org/register/';
 // export const RegisterLink = 'https://www.donatelifegeorgia.org/register/';
 export const VideoLinks = Object.freeze({
   actNow: 'https://www.googledrive.com/host/0B9BUn-WivWcpLVU4T2FTdEphdEk',

@@ -1,3 +1,11 @@
+.home {
+  main {
+    height: calc(100vh - 158px);
+    @media(min-width: $screen-md-min - 1) {
+      height: calc(100vh - 90px);
+    }
+  }
+}
 .act-now {
   .intro-banner {
     background-image: url('/images/banner_act_now_sm.jpg');

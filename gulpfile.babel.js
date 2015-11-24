@@ -77,7 +77,6 @@ function styles() {
   return gulp.src(paths.css)
     .pipe($.newer(resolveToApp('**')))
     .pipe($.sourcemaps.init())
-    // .pipe($.postcss(processors).on('error', console.error.bind(console)))
     .pipe($.sass({
       precision: 10
     }).on('error', $.sass.logError))

@@ -10,7 +10,7 @@ import '../components/religious-beliefs/religious-beliefs';
 import '../components/footer/footer';
 import template from './app.html!text';
 import 'daneden/animate.css';
-import './app.css!';
+import './styles/app.css!';
 import {RouteConfig, View, Component, Inject} from '../core/decorators/decorators';
 
 // start-non-standard
