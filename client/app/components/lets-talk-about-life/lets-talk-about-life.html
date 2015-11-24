@@ -1,0 +1,82 @@
+<!-- Intro Header -->
+<header class="intro page">
+  <div class="intro-banner">
+  </div>
+
+    <div class="intro-body">
+        <div class="intro-title animated fadeIn">
+            <h1 class="long-title">Let's Talk About Life: <br><span>Donation Intentions </h1>
+        </div>
+        <p class="intro-text animated fadeIn">One organ donor can save 8 lives.</p>
+    </div>
+    </div>
+
+</header>
+
+<section id="video-playlist" class="content-section">
+  <div class="video-playlist-section">
+    <div class="videogular-container">
+      <videogular vg-theme="vm.config.theme.url">
+        <vg-media vg-src="vm.config.sources" vg-tracks="vm.config.tracks">
+        </vg-media>
+
+        <vg-controls>
+          <vg-play-pause-button></vg-play-pause-button>
+          <vg-time-display>{{ currentTime | date:'mm:ss' }}</vg-time-display>
+          <vg-scrub-bar>
+            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+          </vg-scrub-bar>
+          <vg-time-display>{{ timeLeft | date:'mm:ss' }}</vg-time-display>
+          <vg-time-display>{{ totalTime | date:'mm:ss' }}</vg-time-display>
+          <vg-volume>
+            <vg-mute-button></vg-mute-button>
+            <vg-volume-bar></vg-volume-bar>
+          </vg-volume>
+          <vg-fullscreen-button></vg-fullscreen-button>
+        </vg-controls>
+
+        <vg-analytics vg-track-info="vm.config.plugins.analytics"></vg-analytics>
+        <vg-overlay-play></vg-overlay-play>
+        <vg-poster vg-url='vm.config.plugins.poster'></vg-poster>
+      </videogular>
+    </div>
+    <div class="container" style="margin-top:26px;">
+      <div class="pull-left">
+        <a class="btn btn-default btn-lg" ui-sref="religious-beliefs" href="/religious-beliefs"><i class="fa fa-chevron-left"></i> Religious Beliefs</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- External Web links Section -->
+<section class="content-section" style="padding-top:0;">
+  <div class="bottom-section">
+    <div class="container">
+      <div class="slant"></div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="cta-floated">
+            <a href={{::$root.registerLink}} class="btn btn-default btn-lg" target="_blank">Register <br>Now</a>
+          </div>
+          <div class="divider"></div>
+          <div class="row">
+            <div class="col-xs-8 col-sm-9">
+              <h2><span>Organ donation</span> saves lives!</h2>
+              <p>Every 10 minutes a new name is added to the national organ waiting list. And every day, about 21 people in the United States die while waiting for a transplant of a vital organ, such as a heart, liver, kidney, pancreas, lung or bone marrow. Just remember, one organ donor can save 8 lives.</p>
+              <p>Whether or not you should donate is your decision. If you decide to be a donor, indicate your intent on your driver’s license and tell your family.</p>
+            </div>
+            <div class="col-xs-4 col-sm-3">
+              <div class="stat_gfx" style="padding-top:40px;">
+                <img src="/images/8_Lives.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <br>
+          <p class="highlighted">After exploring this website and becoming informed about the facts, think about registering on your state website to give the most precious gift of all – the gift of life.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

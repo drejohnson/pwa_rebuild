@@ -1,0 +1,83 @@
+<!-- Intro Header -->
+<header class="intro page">
+  <div class="intro-banner">
+  </div>
+
+  <div class="intro-body">
+    <div class="intro-title animated fadeIn">
+      <h1>Fairness <br><span>In Healthcare Delivery</span></h1>
+    </div>
+    <p class="intro-text animated fadeIn">There is unfairness in healthcare delivery, but people are not treated differently because of their organ donation status.</p>
+    </div>
+  </div>
+</header>
+
+<section id="video-playlist" class="content-section">
+  <div class="video-playlist-section">
+    <div class="videogular-container">
+      <videogular vg-theme="vm.config.theme.url">
+        <vg-media vg-src="vm.config.sources"
+                  vg-tracks="vm.config.tracks">
+        </vg-media>
+
+        <vg-controls>
+          <vg-play-pause-button></vg-play-pause-button>
+          <vg-time-display>{{ currentTime | date:'mm:ss' }}</vg-time-display>
+          <vg-scrub-bar>
+            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+          </vg-scrub-bar>
+          <vg-time-display>{{ timeLeft | date:'mm:ss' }}</vg-time-display>
+          <vg-time-display>{{ totalTime | date:'mm:ss' }}</vg-time-display>
+          <vg-volume>
+            <vg-mute-button></vg-mute-button>
+            <vg-volume-bar></vg-volume-bar>
+          </vg-volume>
+          <vg-fullscreen-button></vg-fullscreen-button>
+        </vg-controls>
+
+        <vg-analytics vg-track-info="vm.config.plugins.analytics"></vg-analytics>
+        <vg-overlay-play></vg-overlay-play>
+        <vg-poster vg-url='vm.config.plugins.poster'></vg-poster>
+      </videogular>
+    </div>
+    <div class="container" style="margin-top:26px;">
+      <div class="pull-left">
+        <a class="btn btn-default btn-lg" ui-sref="fairness-in-organ-allocation" href="/fairness-in-organ-allocation"><i class="fa fa-chevron-left"></i> Fairness In Organ Allocation</a>
+      </div>
+      <div class="pull-right">
+        <a class="btn btn-default btn-lg" ui-sref="religious-beliefs" href="/religious-beliefs">Religious Beliefs <i class="fa fa-chevron-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- External Web links Section -->
+<section class="content-section" style="padding-top:0;">
+  <div class="bottom-section">
+    <div class="slant"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="cta-floated">
+            <a href={{::$root.registerLink}} class="btn btn-default btn-lg" target="_blank">Register <br>Now</a>
+          </div>
+          <div class="divider"></div>
+          <h2><span>In the case of an accident,</span> your life is the number one priority!</h2>
+          <p>No healthcare worker checks if you are an organ donor before they begin caring for you. The hospital team that works to save your life is completely different from the organ transplant team.</p>
+          <p>A computer system selects a person on the waiting list to receive and organ based on the severity of illness, time spent waiting, blood type and geographic location. Wealth, race and gender are not considered.<a href="http://www.americantransplantfoundation.org/about-transplant/facts-and-myths/" target="_blank">*</a></p>
+          <div class="divider"></div>
+          <div class="bottom_more">
+            <div class="more_block">
+              <div class="more_bg"></div>
+              <h2 class="intro_more">To learn more about...</h2>
+              <p>...religious beliefs and organ donation, view the following video: </p>
+              <p><a ui-sref="religious-beliefs" href="/religious-beliefs">Religious Beliefs >></a></p>
+            </div>
+          </div>
+          <p class="highlighted">After exploring this website and becoming informed about the facts, think about registering on your state website to give the most precious gift of all – the gift of life.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

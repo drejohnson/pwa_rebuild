@@ -1,0 +1,21 @@
+<nav>
+	<div class="navbar navbar-custom navbar-fixed-top ng-untouched ng-valid ng-scope ng-dirty ng-valid-parse" role="navigation" ng-model="collapsed" bs-navbar="" bs-collapse="">
+	  <div class="contain">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" bs-collapse-toggle="" data-toggle="collapse">MENU <i class="fa fa-bars"></i>
+	      </button>
+	      <a class="navbar-brand page-scroll logo" ui-sref="home" href="#/"><img src="/images/logo.png" alt="">
+	      </a>
+	    </div>
+	    <div class="collapse navbar-collapse navbar-right navbar-main-collapse am-collapse" bs-collapse-target="">
+	      <ul class="nav navbar-nav">
+					<li ng-repeat="item in vm.navigation" role="presentation">
+		        <a ui-sref="{{::item.state}}" ui-sref-active="active" bs-collapse-toggle="" data-toggle="collapse">
+		          {{ item.label }}
+		        </a>
+		      </li>
+	      </ul>
+	    </div>
+	  </div>
+	</div>
+</nav>
