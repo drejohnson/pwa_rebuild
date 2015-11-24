@@ -17,6 +17,9 @@
   "author": "DeAndre Johnson",
   "license": "MIT",
   "jspm": {
+    "directories": {
+      "baseURL": "client"
+    },
     "configFile": "jspm.config.js",
     "dependencies": {
       "angular": "github:angular/bower-angular@^1.5.0-beta.0",
@@ -46,6 +49,7 @@
       "videogular-themes-default": "github:videogular/bower-videogular-themes-default@^1.3.2"
     },
     "devDependencies": {
+      "capaj/jspm-hot-reloader": "github:capaj/jspm-hot-reloader@^0.3.0",
       "babel": "npm:babel-core@5.8.30",
       "babel-runtime": "npm:babel-runtime@5.8.30",
       "core-js": "npm:core-js@^1.2.6"

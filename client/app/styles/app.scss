@@ -3,8 +3,8 @@
 
 @import 'variables';
 
-$icon-font-path: "../../../jspm_packages/github/twbs/bootstrap-sass@3.3.5/assets/fonts/bootstrap/";
-@import '../../../jspm_packages/github/twbs/bootstrap-sass@3.3.5/assets/stylesheets/_bootstrap.scss';
+$icon-font-path: "../../jspm_packages/github/twbs/bootstrap-sass@3.3.5/assets/fonts/bootstrap/";
+@import '../../jspm_packages/github/twbs/bootstrap-sass@3.3.5/assets/stylesheets/_bootstrap.scss';
 
 @import 'navbar';
 @import 'intro';
