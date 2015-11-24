@@ -25,6 +25,7 @@ System.config({
     "babel": "npm:babel-core@5.8.24",
     "babel-runtime": "npm:babel-runtime@5.8.24",
     "bootstrap-sass": "github:twbs/bootstrap-sass@3.3.5",
+    "capaj/jspm-hot-reloader": "github:capaj/jspm-hot-reloader@0.3.0",
     "clean-css": "npm:clean-css@3.4.4",
     "core-js": "npm:core-js@1.1.4",
     "css": "github:systemjs/plugin-css@0.1.17",
@@ -47,6 +48,11 @@ System.config({
     },
     "github:angular/bower-angular-animate@1.5.0-beta.0": {
       "angular": "github:angular/bower-angular@1.5.0-beta.0"
+    },
+    "github:capaj/jspm-hot-reloader@0.3.0": {
+      "lodash.clonedeep": "npm:lodash.clonedeep@3.0.2",
+      "socket.io-client": "github:socketio/socket.io-client@1.3.7",
+      "weakee": "npm:weakee@0.9.1"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
@@ -150,6 +156,30 @@ System.config({
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
+    "npm:lodash._baseassign@3.2.0": {
+      "lodash._basecopy": "npm:lodash._basecopy@3.0.1",
+      "lodash.keys": "npm:lodash.keys@3.1.2"
+    },
+    "npm:lodash._baseclone@3.3.0": {
+      "lodash._arraycopy": "npm:lodash._arraycopy@3.0.0",
+      "lodash._arrayeach": "npm:lodash._arrayeach@3.0.0",
+      "lodash._baseassign": "npm:lodash._baseassign@3.2.0",
+      "lodash._basefor": "npm:lodash._basefor@3.0.2",
+      "lodash.isarray": "npm:lodash.isarray@3.0.4",
+      "lodash.keys": "npm:lodash.keys@3.1.2"
+    },
+    "npm:lodash._basefor@3.0.2": {
+      "process": "github:jspm/nodelibs-process@0.1.1"
+    },
+    "npm:lodash.clonedeep@3.0.2": {
+      "lodash._baseclone": "npm:lodash._baseclone@3.3.0",
+      "lodash._bindcallback": "npm:lodash._bindcallback@3.0.1"
+    },
+    "npm:lodash.keys@3.1.2": {
+      "lodash._getnative": "npm:lodash._getnative@3.9.1",
+      "lodash.isarguments": "npm:lodash.isarguments@3.0.4",
+      "lodash.isarray": "npm:lodash.isarray@3.0.4"
+    },
     "npm:os-browserify@0.1.2": {
       "os": "github:jspm/nodelibs-os@0.1.0"
     },
@@ -195,6 +225,11 @@ System.config({
     },
     "npm:util@0.10.3": {
       "inherits": "npm:inherits@2.0.1",
+      "process": "github:jspm/nodelibs-process@0.1.1"
+    },
+    "npm:weakee@0.9.1": {
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1"
     }
   }
